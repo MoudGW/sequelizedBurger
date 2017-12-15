@@ -17,7 +17,7 @@ module.exports = function(app) {
       res.redirect('/');
     });
   });
-  app.put('burgers/:id',function(req, res) {
+  app.put('/burgers/:id',function(req, res) {
     db.burgers.update({
       devoured:1
     },
@@ -29,7 +29,7 @@ module.exports = function(app) {
       res.redirect('/');
     });
   });
-  app.delete('burgers/:id', function(req, res) {
+  app.delete('/burgers/:id',function(req, res) {
     db.burger.destroy({
       where: {
         id: req.params.id
@@ -37,5 +37,5 @@ module.exports = function(app) {
     }).then(function(data){
       res.redirect('/');
     });
-  }); 
+  });
 }

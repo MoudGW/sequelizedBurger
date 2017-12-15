@@ -8,6 +8,7 @@
           {{#unless this.devoured}}
             <div style="display: flex;">
                <div class='Available' style="background-color: white;border: solid 1px blue;">{{this.burger_name}}</div>
+                <input type="text" id="id" name="eater" placeholder="">
               <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                 <button type="submit" class='Available'>devoured it</button>
               </form>
